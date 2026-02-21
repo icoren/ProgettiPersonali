@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmk7fihxe467p"]
-
-[ext_resource type="ArrayMesh" uid="uid://s8oyxy22vlh0" path="res://addons/EsagonoBase.obj" id="1_htvb7"]
-
-[node name="HexTile" type="MeshInstance3D"]
-mesh = ExtResource("1_htvb7")
