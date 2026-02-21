@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0few1eeoyfcj"]
+
+[ext_resource type="ArrayMesh" uid="uid://c85332a35btto" path="res://Assets/Models/tiles/hex/obj/hex_forest_detail.obj" id="1_elifu"]
+[ext_resource type="Script" path="res://Scripts/erba.gd" id="2_4ivpx"]
+
+[node name="Erba" type="MeshInstance3D" groups=["CaselleEsagonaliGoalPossible"]]
+mesh = ExtResource("1_elifu")
+script = ExtResource("2_4ivpx")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.45, 0.5, 0)
+polygon = PackedVector2Array(-3.43986, 0.597348, -3.42965, -0.566718, -2.45959, -1.13854, -1.43848, -0.607563, -1.44869, 0.566715, -2.43917, 1.16917)
+
+[node name="Label" type="Label3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.33059, 0.375113, 0, -0.375113, 0.33059, 0, 1.19787, 0.431557)
+billboard = 1
+
+[connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]
