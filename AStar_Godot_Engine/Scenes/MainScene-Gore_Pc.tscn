@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvxapb8c6h60g"]
+
+[ext_resource type="Script" path="res://Scripts/ScenaPrincipale.gd" id="1_fyd6g"]
+[ext_resource type="PackedScene" uid="uid://d0few1eeoyfcj" path="res://Scenes/erba.tscn" id="2_dysxr"]
+[ext_resource type="Texture2D" uid="uid://ydejpdsh7n2m" path="res://Assets/NinjaSprites/Animals/Chicken/SpriteSheetBrown.png" id="4_qg7bp"]
+[ext_resource type="Script" path="res://Scripts/CameraGallina.gd" id="5_2pqns"]
+
+[node name="ScenaMain" type="Node3D"]
+script = ExtResource("1_fyd6g")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.725074, 0.688671, 0, -0.688671, -0.725074, 0, 0.817252, 0)
+
+[node name="Erba" parent="." instance=ExtResource("2_dysxr")]
+
+[node name="Star" type="Sprite3D" parent="."]
+transform = Transform3D(2.75, 0, 0, 0, 2.75, 0, 0, 0, 2.75, 0, 1.25, 0)
+billboard = 1
+texture_filter = 0
+texture = ExtResource("4_qg7bp")
+hframes = 2
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 3, 5)
+script = ExtResource("5_2pqns")

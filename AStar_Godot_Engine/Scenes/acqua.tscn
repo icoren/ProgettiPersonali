@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtc3kkovx86wh"]
+
+[ext_resource type="ArrayMesh" uid="uid://dur3pyixyq1fi" path="res://Assets/Models/tiles/hex/obj/hex_water_detail.obj" id="1_xrpx8"]
+[ext_resource type="Script" path="res://Scripts/acqua.gd" id="2_64pwn"]
+
+[node name="Acqua" type="MeshInstance3D"]
+mesh = ExtResource("1_xrpx8")
+script = ExtResource("2_64pwn")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.45, 0.5, 0)
+polygon = PackedVector2Array(-3.43986, 0.597348, -3.42965, -0.566718, -2.45959, -1.13854, -1.43848, -0.607563, -1.44869, 0.566715, -2.43917, 1.16917)
